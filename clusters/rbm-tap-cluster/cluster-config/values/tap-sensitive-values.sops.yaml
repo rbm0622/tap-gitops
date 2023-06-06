@@ -1,22 +1,27 @@
 tap_install:
-    sensitive_values: null
+    sensitive_values:
+        shared:
+            image_registry:
+                project_path: ENC[AES256_GCM,data:oPIdkypwzNG5515R+LZKSSnu4GWOv3JRkxR44ZMTlA==,iv:0QtH7OfVcWCSe1YzW76kcHPOZf1Wp3G3XW5cl4giwfA=,tag:Y2e5lw1mRwK8QwWiiMOUMA==,type:str]
+                username: ENC[AES256_GCM,data:RGRpqoE=,iv:2Gr/ThZhsBAw53kl5qzOJ+4d6AjLNhjxysbB9Ps32+0=,tag:nAYRiR9zNBs3sHFkiTgoBQ==,type:str]
+                password: ENC[AES256_GCM,data:1o+HPDdNrkijZw==,iv:r4C8UErbs9KH4Pvs3lpZehDy7yuGu8cAJgMKgWRhtzU=,tag:MYtHDm0XStT4TvUq5J6NRQ==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age:
-        - recipient: age1gfm7h3uggk2e49h7daha80gu54sju6zvqkctzsklhrp0ppsu6cxq8pmjdf
+        - recipient: age18x94qy3g6rskvpkmzezhm7adusrrpl8rg923k4rgkz6ju9ljte9qc0ga9c
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBhSXZGYUpvTmdTRjJzaHZL
-            bDNnUW1naW1YVVdTdnpSVlJXZEVNY1ZXajI4ClZxalhUWjFZYkZuejBZdVJudjNm
-            aXVTNGJCcFgzeC9RdVY0R2s5M1FQaVkKLS0tIFRyVFlPcFR5MFR3VWg0UU1heTN2
-            VXNiVURVenJpV0EyUEh3Sk9jUXc5REUKe27HXVbYMUdyYV4h6uAosSRV8U/Wj29x
-            Kas4kgVWOwJK9Z9q5Ki+2tnEwnQCWl3ZGDrw4e8OhJije0KDdNORvA==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAyeFg5Tjc4U0NQcFNoVnFy
+            T08rWVFoYkZ5V24xSTl4N29QWW9NUUZqbFRzCkFUaTNzMzFlQ1lRNFBjbENhWElj
+            NXhmR29CNWxPdUFBTUhlMG5KWENZMkEKLS0tIGkxZk14MmFPcDIrYlJuZzJxMmts
+            VlZNbjM4QmRSblZjdzBxa01vemsxY1kKxkmYk2fobP94Jj1PSF8TrMFoswGac3EO
+            ZWHGpzOstTihY0b/0lXk1Mb+ygSXZIU8zfU5HFF5FhvjdwjTm4/1pg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-05-11T19:48:49Z"
-    mac: ENC[AES256_GCM,data:uaCb6isc5n0g8Qo/B9zVtukqZUUDjgHvRfNbqXQhFCwZ4icKG6XxkVcQEwoAh6lX6LKQXh/gTdkl2GYhRMETNi4xL69FzJkmkoJCkKxWMLQ28u4efFWIO0Ehkt1aI3eLEPm/j1bUWJ0CwGp9QADwB9IMIvmHI7ZgDeMWThjQIkc=,iv:e4V20RiS2tUwMuxqgrgq11vy7aqQt8iJJuIRwBjdUbo=,tag:BsG7zjUnKq4563MnRilzkw==,type:str]
+    lastmodified: "2023-06-06T20:21:56Z"
+    mac: ENC[AES256_GCM,data:4szs3AX2YCbSTo4JeHMOOtMuDfz2W1ije07Ng0mPve1+bXq0YcC0/Da58569d2wy/p94sY0hrPaPpRfdsoKwVEvDNg2/C0XjyJM5XVlasixdoYOBIPze3ZZGH2YuMd/XxWAHIZnz6Ef51m6aA93EJw2KoiEtdiqfIMzxjTsnaRo=,iv:6P99NUJRrH7Xg+Vap/Bmil3RrS6F9T7vT5R4NRhYrqo=,tag:9pCs5MMkqV2lGrY23736Gg==,type:str]
     pgp: []
     unencrypted_suffix: _unencrypted
     version: 3.7.3
