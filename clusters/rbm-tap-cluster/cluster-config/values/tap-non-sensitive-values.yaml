@@ -1,0 +1,40 @@
+shared:
+  kubernetes_version: "1.25.7" # Required regardless of distribution when Kubernetes version is 1.25 or later.
+
+ceip_policy_disclosed: true # Installation fails if this is not set to true. Not a string.
+
+#The above keys are minimum numbers of entries needed in tap-values.yaml to get a functioning TAP Full profile installation.
+
+#Below are the keys which may have default values set, but can be overridden.
+
+profile: full # Can take iterate, build, run, view.
+
+contour:
+  envoy:
+    service:
+      type: LoadBalancer # This is set by default, but can be overridden by setting a different value.
+
+tap_gui:
+#  service_type: LoadBalancer
+  service_type: ClusterIP # If the shared.ingress_domain is set as above, this must be set to ClusterIP.
+  ingressEnabled: true
+  ingressDomain: tap.home.mendelsohns.net
+  metadataStoreAutoconfiguration: true # Creates a service account, the Kubernetes control plane token and the requisite app_config block to enable communications between Tanzu Application Platform GUI and SCST - Store.
+  app_config:
+    app:
+      baseUrl: http://tap-gui.tap.home.mendelsohns.net # No port needed with Ingress
+    catalog:
+      locations:
+        - type: url
+          target: https://github.com/rbm0622/yelb-catalog/blob/main/catalog-info.yaml
+    backend:
+      baseUrl: http://tap-gui.tap.home.mendelsohns.net # No port needed with Ingress
+      cors:
+        origin: http://tap-gui.tap.home.mendelsohns.net # No port needed with Ingress
+
+scanning:
+  metadataStore:
+    url: "" # Configuration is moved, so set this string to empty.
+
+namespace_provisioner:
+  controller: true
